@@ -26,6 +26,12 @@ class PostsController < ActionController::Base
     redirect_to :action => "show", :id => @post.id
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to :action => "index"
+  end
+
   private
     def post_params
       params.require(:post).permit(:title, :text)

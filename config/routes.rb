@@ -1,15 +1,17 @@
 Rblog::Application.routes.draw do
 
-  get '/', :to => 'posts#index'
+  get '/',               :to => 'posts#index'
 
-  get '/posts/new', :to => 'posts#new'
+  get '/posts/new',      :to => 'posts#new'
 
-  get '/posts/:id', :to => 'posts#show'
+  get '/posts/:id',      :to => 'posts#show'
 
-  post '/posts/new', :to => 'posts#create'
+  post '/posts/',        :to => 'posts#create'
 
   get '/posts/:id/edit', :to => 'posts#edit'
 
-  put '/posts/:id/edit', :to => 'posts#update'
+  put '/posts/:id/',     :to => 'posts#update'
+
+  delete '/posts/:id/',  :to => 'posts#destroy'
 
 end
