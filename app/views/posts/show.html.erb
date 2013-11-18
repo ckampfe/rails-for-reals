@@ -11,5 +11,5 @@
 
   <%= link_to 'Edit', :controller => "posts", :action => "edit", :id => @post %>
   <%= link_to 'Back', :controller => "posts", :action => "index" %>
-  <%= link_to 'Delete', :controller => "posts", :action => "destroy", :method => "delete" %>
+  <%= button_to('Delete', { :action => "destroy", :id => @post.id }, :method => "delete" ) %>
 </div>
