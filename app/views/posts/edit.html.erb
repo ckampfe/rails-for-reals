@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Editing post</h1>
+  <%= render 'form' %>
+
+  <%= link_to 'Show', :controller => "posts", :action => "show", :id => @post %> |
+  <%= link_to 'Back', :controller => "posts", :action => "index" %>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Whoa what a blog!</h1>
+  <%= link_to 'New post', :controller => "posts", :action => "new" %>
+
+  <ul>
+    <% @posts.each do |post| %>
+      <li><%= link_to post.title, :controller => "posts", :action => "show", :id => post %></li>
+    <% end %>
+  </ul>
+
+</div>
