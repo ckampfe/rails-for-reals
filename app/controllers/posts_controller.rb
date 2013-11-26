@@ -3,10 +3,9 @@ class PostsController < ActionController::Base
   caches_page :index
 
   def index
-   @posts =  Rails.cache.fetch("posts", :expires_in => 400.seconds) do
-      Post.all
-    end
+    @posts = Post.all_cached
   end
+
 
   def new
   end
