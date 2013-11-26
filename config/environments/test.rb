@@ -34,4 +34,7 @@ Rblog::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  # caching
+  config.action_controller.perform_caching = true
 end
