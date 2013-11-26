@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/kreetitech/cache_fu.git
+  revision: 8708700468df03c7e41f94117029265490933bff
+  specs:
+    cache_fu (0.2.0)
+      rails (~> 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -37,6 +44,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    dalli (2.6.4)
     erubis (2.7.0)
     execjs (2.0.2)
     hike (1.2.3)
@@ -50,6 +58,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcache-client (1.8.5)
     mime-types (1.25)
     multi_json (1.8.2)
     pg (0.17.0)
@@ -113,8 +122,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  cache_fu!
   coffee-rails (~> 3.2.1)
+  dalli
   jquery-rails
+  memcache-client
   pg
   rails (= 3.2.15)
   rails_12factor
