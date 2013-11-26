@@ -36,5 +36,6 @@ Rblog::Application.configure do
   config.active_support.deprecation = :stderr
 
   # caching
+  config.cache_store = :dalli_store
   config.action_controller.perform_caching = true
 end

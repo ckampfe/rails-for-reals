@@ -36,5 +36,6 @@ Rblog::Application.configure do
   config.assets.debug = true
 
   # Caching
+  config.cache_store = :dalli_store
   config.action_controller.perform_caching = true
 end
