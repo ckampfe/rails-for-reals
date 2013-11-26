@@ -1,7 +1,11 @@
 class PostsController < ActionController::Base
+
+  caches_page :index
+
   def index
-    @posts = Post.all
+    @posts = Post.all_cached
   end
+
 
   def new
   end
